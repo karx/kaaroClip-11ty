@@ -1,0 +1,29 @@
+{
+  "name": "kaaroClip-11ty",
+  "version": "1.0.0",
+  "description": "kaaroClip using 11ty.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx eleventy",
+    "watch": "npx eleventy --watch",
+    "serve": "npx eleventy --serve",
+    "debug": "DEBUG=* npx eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karx/kaaroClip-11ty.git"
+  },
+  "author": "Shy Ruparel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karx/kaaroClip-11ty.git/issues"
+  },
+  "homepage": "https://github.com/karx/kaaroClip-11ty.git#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "contentful": "^7.14.4",
+    "dotenv": "^8.2.0",
+    "twitch": "^4.4.0",
+    "twitch-auth": "^4.4.0"
+  }
+}
