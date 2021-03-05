@@ -1,13 +1,12 @@
 
 
-kaaroClip - 11ty
+A-frame Storytelling - 11ty
 =====
 
-kaaroClip version using [11ty](https://www.11ty.dev/). It's automatically deployed via GitHub Actions and then hosted by GitHub Pages. Data is fetched live from Twitch APIs at build time.
+Storytelling experience built using A-frame and Anime.js.
 
-![Screenshot of Front Page](images/front_page.png)
+Entities are picked from Wikidata, JSON upload or custom defination in Markdown files. 
 
-What is this about?
 =====
 
 This example contains [11ty Javascript Data Files](https://www.11ty.dev/docs/data-js/) that take Twitch provided clip data. The front end utilizes [Bulma](https://bulma.io/) for layout and styling. When code is committed or content is published, a build process is triggered that utilizes [GitHub Actions for GitHub Pages](https://github.com/peaceiris/actions-gh-pages) to build and deploy the website.
@@ -32,3 +31,4 @@ Getting started
 Some stories are worth telling. (in VR)
 
 We will explore one such story today: The second Voyage of the HMS Beagle
+
