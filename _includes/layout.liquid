@@ -64,10 +64,10 @@
         ></a-sky>
         
         {% for stage in collections.stages %}
-            <a-link position="{{forloop.index}}0 1.6 -2" href="{{stage.url}}" title="{{stage.data.title}}" image="{{stage.data.location.src}}"></a-link>
+            <a-link position="{{forloop.index}}0 1 -2" href="{{stage.url}}" title="{{stage.data.title}}" image="{{stage.data.location.src}}"></a-link>
 
         {% endfor %}
-        <a-link position="-5 2 -2" href="/custom/schema/" title="JsonLD viz" image="{{stage.data.location.src}}"></a-link>
+        <a-link position="-5 1 -2" href="/custom/schema/" title="JsonLD viz" image="{{stage.data.location.src}}"></a-link>
     
     </a-scene>
     <div style="width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: -1; overflow: hidden">
