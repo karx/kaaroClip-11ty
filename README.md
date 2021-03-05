@@ -27,3 +27,8 @@ Getting started
 #### Ref
 * https://github.com/contentful/11ty-contentful-gallery
 * https://github.com/karx/kaaroClip
+
+## The Story
+Some stories are worth telling. (in VR)
+
+We will explore one such story today: The second Voyage of the HMS Beagle

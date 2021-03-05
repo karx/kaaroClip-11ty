@@ -21,8 +21,10 @@
   "homepage": "https://github.com/karx/kaaroClip-11ty.git#readme",
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "axios": "^0.21.1",
     "contentful": "^7.14.4",
     "dotenv": "^8.2.0",
+    "fetch": "^1.1.0",
     "twitch": "^4.4.0",
     "twitch-auth": "^4.4.0"
   }
