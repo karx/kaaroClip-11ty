@@ -11,7 +11,7 @@ Entities are picked from Wikidata, JSON upload or custom defination in Markdown 
 
 This example contains [11ty Javascript Data Files](https://www.11ty.dev/docs/data-js/) that take Twitch provided clip data. The front end utilizes [Bulma](https://bulma.io/) for layout and styling. When code is committed or content is published, a build process is triggered that utilizes [GitHub Actions for GitHub Pages](https://github.com/peaceiris/actions-gh-pages) to build and deploy the website.
 
-![Screenshot of Photo Page](images/photo_page.png)
+![Screenshot of Photo Page](images/StoryGame.png)
 
 Getting started
 =====
