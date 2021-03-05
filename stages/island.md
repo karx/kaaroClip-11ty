@@ -10,6 +10,7 @@ wikidata_entities:
     - Q484591
     - Q1069
 layout: frame-layout.liquid
+tags: stages
 ---
 
 ## Drawin' Voyage

@@ -5,6 +5,7 @@
     {% if google-id %}
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{google-id}}"></script>
+    
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -14,52 +15,71 @@
     {%endif%}
     {%- assign $title = renderData.title %}
     <title>{{title}}</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css"> -->
     <link rel="stylesheet" href="/css/base.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <!-- <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> -->
+
+    <script src="/js/aframe.min.js"></script>
+    <script src="/js/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
+    <script src="https://unpkg.com/aframe-forcegraph-component/dist/aframe-forcegraph-component.min.js"></script> 
+    <!-- <script src="https://unpkg.com/aframe-camera-transform-controls-component/dist/aframe-camera-transform-controls-component.min.js"></script> -->
+    <script src="/js/aframe-camera-transform-controls-component.js"></script>
+
+
+    
 </head>
 
 <body>
-    <header>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <a class="navbar-item" href="/">
-                    <!-- <img src="https:{{contentful-brand.logo.fields.file.url}}?w=200" alt="{{contentful-brand.name}}"> -->
-                    <h2>kaaroClip</h2>
-                </a>
-            </div>
-            <div class="navbar-end">
-                <a class="navbar-item" href="/"><i class="fab fa-github"></i></a>
-                <!-- <a href="/" class='navbar-item'><i class="far fa-images"></i></a> -->
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="hero is-info is-fullheight-with-navbar">
-            <div class="hero-body">
-                <div class="container">
-                    {% if renderData.title %}
-                    <h1 class="title has-text-centered">
-                        {{renderData.title}}
-                    </h1>
-                    {%endif%}
+    <!-- {{collection.scenes}} -->
+    <a-scene physics id="theScene" camera-transform-controls>
+        
+        <a-entity id="cameraRig" position="0 1.6 0" rotation="0 180 0" movement-controls="fly: true">
+            <a-entity id="lefthand" camera-transform-controls-hand="hand: left" laser-controls="hand: left" thumbstick-goto=""  raycaster="showLine: true; near:3; far: 20; lineColor: blue; lineOpacity: 0.5"></a-entity>
+            <a-entity id="righthand" camera-transform-controls-hand="hand: right" laser-controls="hand: right" raycaster="showLine: true; near:3; far: 20; lineColor: purple; lineOpacity: 0.5" ></a-entity>
+            
+            <a-entity id="camera" camera  look-controls>
+                <a-entity 
+                position="2 0.3 -1.4"
+                rotation="0 -35 0"
+                id="nodeDesc"
+                geometry="primitive: plane"
+                material="color: #131383; transparent: true; opacity: 0.05;" 
+                text="value: {{title}}"
+                
+               >
+            </a-entity>
+              
 
-                    {% if renderData.sub-title %}
-                    <h3 class="title has-text-centered">
-                        {{renderData.sub-title}}
-                    </h3>
-                    {%endif%}
-                    {{content}}
-                </div>
-            </div>
-        </section>
-    </main>
+            </a-entity>
+        </a-entity>
+        
+        <a-entity geometry="primitive: box; height: 4; width:2; depth:0.1"  material="shader: html; target: #htmlElement; transparent: true; opacity: 0.9;"></a-entity>
+        
+        <a-sky id="theSky"
+            color="#F3F3F3" 
+            {% if location %}
+                src="{{location.src}}"
+            {% endif %}
+        ></a-sky>
+        
+        {% for stage in collections.stages %}
+            <a-link position="{{forloop.index}}0 1.6 -2" href="{{stage.url}}" title="{{stage.data.title}}" image="{{stage.data.location.src}}"></a-link>
+
+        {% endfor %}
+        <a-link position="-5 2 -2" href="/custom/schema/" title="JsonLD viz" image="{{stage.data.location.src}}"></a-link>
+    
+    </a-scene>
+    <div style="width: 100%; height: 100%; position: fixed; left: 0; top: 0; z-index: -1; overflow: hidden">
+        <div id="htmlElement" style="background: #F3F3F3; color: #333; font-size: 48px">
+        {{content}}
+        </div>
+      </div>
+    
+      <script src="/js/slide-control.js"></script>
 </body>
 <footer class="footer">
-    <div class=" has-text-centered">
-        <p>View more on <a href="https://github.com/karx/kaaroClip-11ty.git/"><i class="fab fa-github is-large"></i></a></p>
-        
-    </div>
+    
 </footer>
 
 </html>
