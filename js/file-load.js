@@ -142,7 +142,7 @@ async function goPlot(graph_data, force_graph_prop = 'all', node_color_prop = 't
 		'node-label': 'label',
 		'link-auto-color-by': 'prop',
 		// 'link-label': 'prop',
-		// 'link-curvature': 0.3,
+		'link-curvature': 0.3,
 		// 'link-directional-arrow-length': 1,
 		// 'link-directional-arrow-rel-pos': (e) => { return 1},
 		'link-width': '1px',
