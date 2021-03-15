@@ -4,6 +4,7 @@ A-frame Storytelling - 11ty
 =====
 
 Storytelling experience built using A-frame and Anime.js.
+In a quest to build `A framework for storytelling using structure data.`
 
 Entities are picked from Wikidata, JSON upload or custom defination in Markdown files. 
 
