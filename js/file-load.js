@@ -123,7 +123,7 @@ async function goPlot(graph_data, force_graph_prop = 'all', node_color_prop = 't
 			return {	
 				source: x.id,
 				target: x.val,
-				prop: x.prop
+				prop: x.prop,
 			}
 		});
 	let nodeIDList = nodeList.map(x => x["@id"]);
@@ -143,6 +143,7 @@ async function goPlot(graph_data, force_graph_prop = 'all', node_color_prop = 't
 		'link-auto-color-by': 'prop',
 		// 'link-label': 'prop',
 		'link-curvature': 0.3,
+		
 		// 'link-directional-arrow-length': 1,
 		// 'link-directional-arrow-rel-pos': (e) => { return 1},
 		'link-width': '1px',

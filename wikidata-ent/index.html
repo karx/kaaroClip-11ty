@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wikidata Ent</title>
+    <script src="/js/wikibase/wikibase-sdk.js"></script>
+    <script src="/js/wikibase/wikidata-sdk.js"></script>
+  </head>
+  <body>
+      <h2>Wikidata ent fetch playground</h2>
+
+
+    <script>
+        console.log({WBK})
+      const url = wdk.getEntities({
+        ids: ["Q1", "Q5", "Q571"],
+        languages: ["en", "fr", "de"], // returns all languages if not specified
+        
+        format: "json", // defaults to json
+        redirections: false, // defaults to true
+      });
+
+      console.log(url);
+
+      fetch(url)
+        .then(response => response.json())
+        .then(wdk.parse.wd.entities)
+        .then(entities => console.log(entities));
+    </script>
+  </body>
+</html>
