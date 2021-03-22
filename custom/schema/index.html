@@ -23,7 +23,7 @@
             
             <a-entity id="camera" camera  look-controls>
                 <a-entity 
-                position="2 0.3 -1.4"
+                position="2 0.3 -1.0"
                 rotation="0 -35 0"
                 id="nodeDesc"
                 geometry="primitive: plane"
@@ -40,21 +40,22 @@
             forcegraph='nodes: [{"id": 1, "label": "first"}, {"id": 2, "label": "second"}]; links: [{"source": 1, "target": 2}];'> 
         </a-entity>
         <a-sky id="theSky" color="#131313"></a-sky>
-        <div class="input-div">
-            <label for="graph-force-prop">Choose Graph Force Prop:</label>
-
-            <select name="graph-force-prop" id="graph-force-prop-select">
-                <option value='all' selected>All</option>
-            </select>
-
-            <label for="node-color-prop">Choose Node color Property:</label>
-
-            <select name="node-color-prop" id="node-color-prop-select">
-                <option value='type' selected>Default (type)</option>
-            </select>
-        </div>
+        
     </a-scene>
     <div id="progress">  </div>
+    <div class="input-div">
+        <label for="graph-force-prop">Choose Graph Force Prop:</label>
+
+        <select name="graph-force-prop" id="graph-force-prop-select">
+            <option value='all' selected>All</option>
+        </select>
+
+        <label for="node-color-prop">Choose Node color Property:</label>
+
+        <select name="node-color-prop" id="node-color-prop-select">
+            <option value='type' selected>Default (type)</option>
+        </select>
+    </div>
     <script src="/js/file-load.js"></script>
 </body>
 </html>

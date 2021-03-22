@@ -92,6 +92,10 @@ window.addEventListener('load', async function () {
 		state.node_color_prop = event.target.value;
 		goPlot(graph_data, state.force_graph_prop, state.node_color_prop)
 	})
+	// document.getElementById('node-radius-prop-select').addEventListener('change', (event) => {
+	// 	state.node_color_prop = event.target.value;
+	// 	goPlot(graph_data, state.force_graph_prop, state.node_color_prop)
+	// })
 
 	document.addEventListener('thumbstickdown', (e) => {
 		console.log('THUmb Down');
@@ -112,12 +116,12 @@ window.addEventListener('load', async function () {
 	
 
 });
-async function goPlot(graph_data, force_graph_prop = 'all', node_color_prop = 'type') {
+async function goPlot(graph_data, force_graph_prop = 'http://schema.org/isPartOf', node_color_prop = 'type') {
 
 	let selectedProp = force_graph_prop;
 	let nodeList = graph_data.nodeList
 	let edgeList = graph_data.edgeList
-		.filter(x => x.prop == selectedProp || force_graph_prop === 'all')
+		.filter(x => x.prop == selectedProp || force_graph_prop === 'http://schema.org/isPartOf')
 		.filter(x => x.target !== null)
 		.map(x => {
 			return {	
@@ -137,12 +141,13 @@ async function goPlot(graph_data, force_graph_prop = 'all', node_color_prop = 't
 	// 	`nodes: ${JSON.stringify(nodeList)}; links: ${JSON.stringify(edgeList)}; node-auto-color-by:"type"; node-label:"label"`)
 	let forceGraphAttr = {
 		nodes: JSON.stringify(nodeList),
+		
 		links: JSON.stringify(edgeList),
 		'node-auto-color-by': node_color_prop,
 		'node-label': 'label',
 		'link-auto-color-by': 'prop',
-		// 'link-label': 'prop',
-		'link-curvature': 0.3,
+		'link-label': 'prop',
+		'link-curvature': 0.4,
 		// 'link-directional-arrow-length': 1,
 		// 'link-directional-arrow-rel-pos': (e) => { return 1},
 		'link-width': '1px',
