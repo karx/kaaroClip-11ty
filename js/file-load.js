@@ -127,7 +127,7 @@ async function goPlot(graph_data, force_graph_prop = 'http://schema.org/isPartOf
 			return {	
 				source: x.id,
 				target: x.val,
-				prop: x.prop
+				prop: x.prop,
 			}
 		});
 	let nodeIDList = nodeList.map(x => x["@id"]);
