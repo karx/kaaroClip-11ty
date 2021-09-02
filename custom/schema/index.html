@@ -18,8 +18,8 @@
     <a-scene physics id="theScene" camera-transform-controls>
         
         <a-entity id="cameraRig" position="0 1.6 0" rotation="0 180 0" movement-controls="fly: true">
-            <a-entity id="lefthand" camera-transform-controls-hand="hand: left" laser-controls="hand: left" thumbstick-goto=""  raycaster="showLine: true; near:3; far: 20; lineColor: blue; lineOpacity: 0.5"></a-entity>
-            <a-entity id="righthand" camera-transform-controls-hand="hand: right" laser-controls="hand: right" raycaster="showLine: true; near:3; far: 20; lineColor: purple; lineOpacity: 0.5" ></a-entity>
+            <a-entity id="lefthand" camera-transform-controls-hand="hand: left" laser-controls="hand: left" thumbstick-goto=""></a-entity>
+            <a-entity id="righthand" camera-transform-controls-hand="hand: right" laser-controls="hand: right" ></a-entity>
             
             <a-entity id="camera" camera  look-controls>
                 <a-entity 
@@ -28,8 +28,7 @@
                 id="nodeDesc"
                 geometry="primitive: plane"
                 material="color: #131383; transparent: true; opacity: 0.05;" 
-                text="value: 1-wide\ndefault."
-                
+                text="value: 1-wide\ndefault."                
                 visible="false"></a-entity>
 
             </a-entity>
