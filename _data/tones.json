@@ -24,7 +24,7 @@
     {
         "Technology": "4G LTE",
         "Audio": "/sound/4G LTE.mp3",
-        "Picture": "/sound/",
+        "Picture": "https://drive.google.com/file/d/1IR-b-4_fnNeOPjHtHI9-A7iwJtCZk3UJ/preview?usp=sharing",
         "Frequency": "700 MHz - 2.2 GHz",
         "Bandwidth": "1.4 MHz - 20 MHz",
         "Mode": "RAW",
