@@ -1,0 +1,21 @@
+---
+permalink: "/"
+layout: layout.liquid
+
+renderData:
+title: "Tone Vizualizer"
+
+---
+<div class="left column is-one-third">
+    {% for tone in tones %}
+    <div class="tone-card">
+        <a class="panel-block" href="/tone/{{tone.Technology | slug}}">
+            <span class="panel-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+            </span>
+            {{tone.Technology}}
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{{content}}

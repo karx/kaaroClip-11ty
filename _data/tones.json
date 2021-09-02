@@ -1,0 +1,57 @@
+[
+    {
+        "Technology": "3G CDMA",
+        "Audio": "/sound/3G CDMA.mp3",
+        "Picture": "https://drive.google.com/file/d/17g0rSDHunwRiV3PERVwZg6H4-nfNqWhF/preview?usp=sharing",
+        "Frequency": "824 MHz - 2.1 GHz",
+        "Bandwidth": "4.2 MHz",
+        "Mode": "RAW",
+        "Modulation": "QAM, QPSK, CDMA",
+        "Location": "N/A",
+        "ACF": "N/A"
+    },
+    {
+        "Technology": "2G CDMA",
+        "Audio": "/sound/2G CDMA.wav",
+        "Picture": "https://drive.google.com/file/d/1zNeoOKzZzDkk6EO7mMm78MxxyU8HgkZ3/preview?usp=sharing",
+        "Frequency": "850 MHz",
+        "Bandwidth": "1.23 MHz",
+        "Mode": "AM",
+        "Modulation": "QPSK",
+        "Location": "N/A",
+        "ACF": "N/A"
+    },
+    {
+        "Technology": "4G LTE",
+        "Audio": "/sound/4G LTE.mp3",
+        "Picture": "/sound/",
+        "Frequency": "700 MHz - 2.2 GHz",
+        "Bandwidth": "1.4 MHz - 20 MHz",
+        "Mode": "RAW",
+        "Modulation": "OFDM, PSK, QAM",
+        "Location": "WORLDWIDE",
+        "ACF": "N/A"
+    },
+    {
+        "Technology": "ALE-400",
+        "Audio": "/sound/ALE-400.mp3",
+        "Picture": "https://drive.google.com/file/d/1HiScCm89NAqEy24MgeF5XOMgfTIPpYC5/preview?usp=sharing",
+        "Frequency": "1.81 MHz - 144.16 MHz",
+        "Bandwidth": "400 Hz",
+        "Mode": "USB",
+        "Modulation": "MFSK",
+        "Location": "WORLDWIDE",
+        "ACF": "N/A"
+    },
+    {
+        "Technology": "5G",
+        "Audio": "/sound/5G.wav",
+        "Picture": "https://drive.google.com/file/d/1TFUC6vbGCRsDbtwInwjg3dHzlSz1LNkp/preview?usp=sharing",
+        "Frequency": "600 MHz - 50000 MHz",
+        "Bandwidth": "100 MHz",
+        "Mode": "AM",
+        "Modulation": "UFMC, GFDM, OFDM, FBMC",
+        "Location": "WORLDWIDE",
+        "ACF": "N/A"
+    }
+]

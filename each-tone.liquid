@@ -1,0 +1,61 @@
+---
+pagination:
+    data: tones
+    size: 1
+    alias: tone
+permalink: "tone/{{ tone.Technology | slug }}/"
+layout: landing.liquid
+---
+<div class="card column is-full">
+    
+    <div class="card-content columns">
+        
+
+        <div class="content column">
+            <p class="title is-4 has-text-dark">{{tone.Technology}}</p>
+            
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+                <tr>
+                    <th>Technology</th>
+                    <td>{{tone.Technology}}</td>
+                </tr>
+                <tr>
+                    <th>Audio</th>
+                    <td>{{tone.Audio}}</td>
+                </tr>
+                <tr>
+                    <th>Picture</th>
+                    <td>{{tone.Picture}}</td>
+                </tr>
+                <tr>
+                    <th>Frequency</th>
+                    <td>{{tone.Frequency}}</td>
+                </tr>
+                <tr>
+                    <th>Bandwidth</th>
+                    <td>{{tone.Bandwidth}}</td>
+                </tr>
+                <tr>
+                    <th>Mode</th>
+                    <td>{{tone.Mode}}</td>
+                </tr>
+                <tr>
+                    <th>Modulation</th>
+                    <td>{{tone.Modulation}}</td>
+                </tr>
+                <tr>
+                    <th>Location</th>
+                    <td>{{tone.Location}}</td>
+                </tr>
+                <tr>
+                    <th>ACF</th>
+                    <td>{{tone.ACF}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="tone-image column">
+            <audio controls src="{{tone.Audio}}"> </audio>
+            <iframe src="{{ tone.Picture }}" width="700" height="500" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
