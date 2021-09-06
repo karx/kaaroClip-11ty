@@ -7,6 +7,7 @@ title: "Tone Vizualizer"
 
 ---
 <div class="left column is-one-third">
+    <h2> Signal Tone Types</h2>
     {% for tone in tones %}
     <div class="tone-card">
         <a class="panel-block" href="/tone/{{tone.Technology | slug}}">
@@ -18,4 +19,10 @@ title: "Tone Vizualizer"
     </div>
     {% endfor %}
 </div>
-{{content}}
+<div class="card column is-full">
+
+    <div class="landing-image">
+        <img src="/images/background.jpg" alt="">
+        <h1 class="center">Digital Tone Familiarization Software</h1>
+    </div>
+</div>

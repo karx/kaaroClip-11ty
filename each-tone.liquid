@@ -10,7 +10,6 @@ layout: landing.liquid
     
     <div class="card-content columns">
         
-
         <div class="content column">
             <p class="title is-4 has-text-dark">{{tone.Technology}}</p>
             
@@ -44,10 +43,18 @@ layout: landing.liquid
                     <td>{{tone.ACF}}</td>
                 </tr>
             </table>
+
+            <h3> Description </h3>
+            <p> {{tone.Description}} </p>
         </div>
         <div class="tone-image column">
             <audio controls src="{{tone.Audio}}"> </audio>
-            <iframe src="{{ tone.Picture }}" width="700" height="500" frameborder="0"></iframe>
+            <div image="tone-image">
+                <img src="{{ tone.Picture }}" width="700" height="500" frameborder="0"></img>
+                <p> Waterfall Image </p>
+            </div>
+            
+
         </div>
     </div>
 </div>

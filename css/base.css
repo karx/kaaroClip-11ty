@@ -5,3 +5,21 @@ a {
 .hero.is-info{
     background-color: #4E97EE
 }
+
+.navbar {
+    background-color: #000080;
+    color: #fff;
+}
+
+.navbar h2 {
+    color: #fff;
+}
+.left {
+    height: 90vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.panel-block:hover {
+    color: #000080 !important;
+}
