@@ -23,3 +23,14 @@ a {
 .panel-block:hover {
     color: #000080 !important;
 }
+
+.head-head {
+    color: yellow !important;
+    font-weight: bold;
+}
+.side-header {
+    color: navy;
+}
+.tone-image img {
+    height: 80vh;
+}

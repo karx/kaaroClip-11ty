@@ -48,10 +48,9 @@ layout: landing.liquid
             <p> {{tone.Description}} </p>
         </div>
         <div class="tone-image column">
-            <audio controls src="{{tone.Audio}}"> </audio>
+            <audio controls src="/sound/Audio Tones/{{tone.Audio}}.mp3" onerror="this.src='/sound/Audio Tones/{{tone.Audio}}.wav'"> </audio>
             <div image="tone-image">
-                <img src="{{ tone.Picture }}" width="700" height="500" frameborder="0"></img>
-                <p> Waterfall Image </p>
+                <img src="/images/Waterfall Images/{{ tone.Picture }}.jpg" onerror="this.src='/images/Waterfall Images/{{ tone.Picture }}.png'"  frameborder="0"></img>
             </div>
             
 
