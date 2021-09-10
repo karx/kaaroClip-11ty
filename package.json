@@ -1,7 +1,7 @@
 {
-  "name": "kaaroClip-11ty",
+  "name": "Digital tone Familiarisation Software",
   "version": "1.0.0",
-  "description": "kaaroClip using 11ty.",
+  "description": "Digital Tone Familiarisation Software for Signal School (Indian Navy).",
   "main": "index.js",
   "scripts": {
     "build": "npx eleventy",
@@ -13,17 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/karx/kaaroClip-11ty.git"
   },
-  "author": "Shy Ruparel",
+  "author": "Edvanta Technologies",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/karx/kaaroClip-11ty.git/issues"
-  },
-  "homepage": "https://github.com/karx/kaaroClip-11ty.git#readme",
   "dependencies": {
     "@11ty/eleventy": "^0.10.0",
-    "contentful": "^7.14.4",
-    "dotenv": "^8.2.0",
-    "twitch": "^4.4.0",
-    "twitch-auth": "^4.4.0"
+    "dotenv": "^8.2.0"
   }
 }
