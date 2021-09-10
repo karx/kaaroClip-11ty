@@ -28,6 +28,9 @@ a {
     color: yellow !important;
     font-weight: bold;
 }
+.head-end {
+    color: yellow !important;
+}
 .side-header {
     color: navy;
 }
